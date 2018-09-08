@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.vn.fa.font.FontManager;
-
+/**
+ * Created by leobui on 09/08/2018
+ */
 public class FontHelper {
     public static final String PREF_NAME = "FONT_SCALE";
     public static final String FONT_TYPE = "FONT_TYPE";
