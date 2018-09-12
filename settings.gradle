@@ -1,1 +1,3 @@
 include ':app'
+//include ':FaFontScale'
+//project(':FaFontScale').projectDir = new File('D:\\Jitpackio\\FaFontScale\\library')

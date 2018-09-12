@@ -29,7 +29,13 @@ public class FontHelper {
             FontManager.getDefault().setScale(HUGE_SCALE);
         }
     }
-
+    public static void init(Context ctx, FontManager.FontScaleType scaleType) {
+        FontManager.getDefault().setScaleType(scaleType);
+        if (scaleType == FontManager.FontScaleType.SCALE_ALL){
+            FontManager.adjustFontScaleAll(ctx, FontManager.getDefault().getScale());
+        }
+        init(ctx);
+    }
     public static void scaleFont(Context ctx, int type) {
         if (type == 0) {
             FontManager.getDefault().setScale(SMALL_SCALE);
