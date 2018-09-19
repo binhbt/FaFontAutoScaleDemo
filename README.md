@@ -38,7 +38,12 @@ Register TextView for Scale:
  - `    FontBinding.bind(this)`: Class contain TextView
  
  -  Support binding for TextView, ViewGroup, WebView 
-
+ - For Proguard
+ ```
+ -keep class com.leo.font.lib.annotations.Keep**
+-keep @com.leo.font.lib.annotations.Keep public class *
+-keepclassmembers @com.leo.font.lib.annotations.Keep class ** { *;}
+```
 Done!
  
 
