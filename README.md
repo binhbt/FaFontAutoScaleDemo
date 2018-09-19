@@ -1,13 +1,13 @@
-# 
-Fuckin Simple TextView Scale Font Injection use Annotation
+
+Fuckin Simple Android TextView Scale Font Injection use Annotation
 =================
 
 Demo
 -------
-This is the sample app in action for Lib
+This is the sample app in action:
 https://github.com/binhbt/FaFontAutoScale
 
-[![https://img.youtube.com/vi/w9SiuWLal-4/0.jpg](http://img.youtube.com/vi/w9SiuWLal-4/0.jpg)](https://www.youtube.com/watch?v=w9SiuWLal-4 "Fucking Awesome Recyclerview")
+[![https://img.youtube.com/vi/w9SiuWLal-4/0.jpg](http://img.youtube.com/vi/w9SiuWLal-4/0.jpg)](https://www.youtube.com/watch?v=w9SiuWLal-4 "Fucking Awesome Auto Scale Font")
 Usage
 -------
 Add a dependency to your all project `build.gradle`:
@@ -24,7 +24,8 @@ Add a dependency to your
 `build.gradle`:
 
     dependencies {
-        implementation 'com.github.binhbt:FaFontAutoScale:1.0.1.2'
+		compile 'com.github.binhbt.FaFontAutoScale:binder:1.0.20'
+		annotationProcessor 'com.github.binhbt.FaFontAutoScale:compiler:1.0.20'
     }
 
 
@@ -32,9 +33,11 @@ Register TextView for Scale:
 
 ```
         @FontAutoScale
-        public TextView movieName;
+        TextView movieName;
 ```
- - `FontManager.bind(object);`: Class contain TextView
+ - `    FontBinding.bind(this)`: Class contain TextView
+ 
+ -  Support binding for TextView, ViewGroup, WebView 
 
 Done!
  

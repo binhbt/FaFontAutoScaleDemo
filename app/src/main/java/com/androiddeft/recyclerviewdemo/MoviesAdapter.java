@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.androiddeft.recyclerviewdemo.beans.Movie;
+import com.leo.font.lib.annotations.AutoScale;
+import com.leo.font.lib.binder.FontBinding;
 import com.vn.fa.font.FontAutoScale;
 import com.vn.fa.font.FontManager;
 
@@ -20,27 +22,28 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.CustomView
     private List<Movie> movies;
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
-        @FontAutoScale
-        public TextView movieName;
-        @FontAutoScale
-        public TextView year;
+        TextView movieName;
+        TextView year;
         public TextView genre;
         public TextView rating;
-
+        @AutoScale
+        View root;
         public CustomViewHolder(View view) {
             super(view);
+            root = view.findViewById(R.id.rl_root);
             movieName = (TextView) view.findViewById(R.id.movieName);
             genre = (TextView) view.findViewById(R.id.genre);
             year = (TextView) view.findViewById(R.id.year);
             rating = (TextView) view.findViewById(R.id.rating);
         }
         public void onBindViewData(Movie movie){
-            FontManager.bind(this);
+            FontBinding.bind(this);
             movieName.setText(movie.getMovieName());
             genre.setText(movie.getGenre());
             year.setText(String.valueOf(movie.getYear()));
             rating.setText(String.valueOf(movie.getRating()));
         }
+
     }
 
     public MoviesAdapter(List<Movie> movies) {

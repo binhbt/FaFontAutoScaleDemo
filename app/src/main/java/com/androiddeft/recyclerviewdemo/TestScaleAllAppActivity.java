@@ -1,20 +1,21 @@
 package com.androiddeft.recyclerviewdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.content.IntentCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.androiddeft.recyclerviewdemo.font.FontHelper;
-import com.vn.fa.font.FontIgnoreScale;
+import com.leo.font.lib.annotations.IgnoreScale;
+import com.leo.font.lib.binder.FontBinding;
 import com.vn.fa.font.FontManager;
 
 public class TestScaleAllAppActivity  extends AppCompatActivity {
     public TextView tvGreeting1;
-    @FontIgnoreScale
+    @IgnoreScale
     public TextView tvGreeting2;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class TestScaleAllAppActivity  extends AppCompatActivity {
         tvGreeting1 = (TextView) findViewById(R.id.tv_greeting1);
         tvGreeting2 = (TextView) findViewById(R.id.tv_greeting2);
         FontHelper.init(this, FontManager.FontScaleType.SCALE_ALL);
-        FontManager.bind(this);
+        FontBinding.bind(this);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,9 +47,9 @@ public class TestScaleAllAppActivity  extends AppCompatActivity {
                 break;
         }
         FontManager.adjustFontScaleAll(this, FontManager.getDefault().getScale());
-/*        startActivity(new Intent(this, TestScaleAllAppActivity.class));
-        finish();*/
-        startActivity(IntentCompat.makeRestartActivityTask(getComponentName()));
+        startActivity(new Intent(this, TestScaleAllAppActivity.class));
+        finish();
+        //startActivity(IntentCompat.makeRestartActivityTask(getComponentName()));
 
         return super.onOptionsItemSelected(item);
     }
