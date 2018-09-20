@@ -24,8 +24,8 @@ Add a dependency to your
 `build.gradle`:
 
     dependencies {
-		compile 'com.github.binhbt.FaFontAutoScale:binder:1.0.20'
-		annotationProcessor 'com.github.binhbt.FaFontAutoScale:compiler:1.0.20'
+		compile 'com.github.binhbt.FaFontAutoScale:binder:1.1.0'
+		annotationProcessor 'com.github.binhbt.FaFontAutoScale:compiler:1.1.0'
     }
 
 
@@ -37,7 +37,13 @@ Register TextView for Scale:
 ```
  - `    FontBinding.bind(this)`: Class contain TextView
  
- -  Support binding for TextView, ViewGroup, WebView 
+ - `    FontBinding.bind(this)`: Class contain TextView
+ - `    @AutoScale
+public class ActivityScaleActivity  extends AppCompatActivity `
+ - `	@AutoScale
+public class FragmentDemo extends Fragment`
+ -  Support binding for TextView, ViewGroup, WebView , Activity, Fragent
+ -  `  FontManager.getDefault().setScale(1.5f);` Set Scale rate
  - For Proguard
  ```
  -keep class com.leo.font.lib.annotations.Keep**
