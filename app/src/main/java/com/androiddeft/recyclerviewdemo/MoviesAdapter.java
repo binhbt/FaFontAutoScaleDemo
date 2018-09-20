@@ -4,12 +4,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.androiddeft.recyclerviewdemo.beans.Movie;
 import com.leo.font.lib.annotations.AutoScale;
 import com.leo.font.lib.binder.FontBinding;
-import com.vn.fa.font.FontAutoScale;
 import com.vn.fa.font.FontManager;
 
 import java.util.List;
@@ -19,6 +19,7 @@ import java.util.List;
  */
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.CustomViewHolder> {
+
     private List<Movie> movies;
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {

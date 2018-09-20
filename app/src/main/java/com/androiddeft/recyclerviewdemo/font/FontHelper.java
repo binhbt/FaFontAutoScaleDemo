@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.vn.fa.font.FontManager;
+
+
 /**
  * Created by leobui on 09/08/2018
  */
