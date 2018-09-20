@@ -37,7 +37,12 @@ Register TextView for Scale:
 ```
  - `    FontBinding.bind(this)`: Class contain TextView
  
- -  Support binding for TextView, ViewGroup, WebView 
+ - `    FontBinding.bind(this)`: Class contain TextView
+ - `    @AutoScale
+public class ActivityScaleActivity  extends AppCompatActivity `
+ - `	@AutoScale
+public class FragmentDemo extends Fragment`
+ -  Support binding for TextView, ViewGroup, WebView , Activity, Fragent
  - For Proguard
  ```
  -keep class com.leo.font.lib.annotations.Keep**
